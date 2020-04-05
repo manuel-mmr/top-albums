@@ -1,0 +1,29 @@
+@import './styles/colors.scss';
+@import './styles/viewport.scss';
+
+:host {
+  cursor: default;
+  display: block;
+  position: relative;
+}
+
+.app-container {
+  margin: auto;
+
+
+  @include viewport--small {
+    width: 556px;
+  }
+
+  @include viewport--medium {
+    width: 748px;
+  }
+
+  @include viewport--large {
+    width: 972px;
+  }
+
+  @include viewport--extra-large {
+    width: 100%;
+  }
+}

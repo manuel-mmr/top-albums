@@ -1,0 +1,45 @@
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+@import '../../styles/viewport.scss';
+
+:host {
+  display: block;
+}
+
+.card {
+  display: block;
+  background-color: $light-grey;
+  cursor: pointer;
+  margin: 10px;
+  width: 180px;
+
+  &:hover {
+    background-color: $dark-grey;
+    color: $white;
+
+    .image {
+      opacity: 0.5;
+    }
+  }
+
+  @include viewport--small {
+    width: 220px;
+  }
+
+  @include viewport--large {
+    width: 270px;
+  }
+}
+
+.name {
+  @extend %font--normal-bold;
+}
+
+.artist {
+  @extend %font--small;
+}
+
+.empty-container {
+  @extend %font--normal-bold;
+  margin-top: 50px;
+}

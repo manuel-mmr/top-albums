@@ -1,0 +1,16 @@
+@import '../../styles/colors.scss';
+
+:host {
+  display: block;
+  height: 57px;
+}
+
+.logo {
+  height: 30px;
+  width: 30px;
+}
+
+.brand {
+  color: $white;
+  margin-left: 10px;
+}

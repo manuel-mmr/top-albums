@@ -1,0 +1,16 @@
+@import '../../styles/fonts.scss';
+
+:host {
+  display: flex;
+}
+
+.albums-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 80px auto auto;
+  justify-content: center;
+}
+
+.empty-container {
+  @extend %font--normal-bold;
+}

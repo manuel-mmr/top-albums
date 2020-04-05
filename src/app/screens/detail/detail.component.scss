@@ -1,0 +1,87 @@
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  margin: 25px auto;
+  width: 270px;
+}
+
+.section {
+
+  &:first-child {
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+  }
+
+  &:last-child {
+    flex: 2;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.album-name {
+  @extend %font--large;
+  margin-top: 15px;
+}
+
+.artist-name,
+.related {
+  @extend %font--normal;
+}
+
+.data {
+  @extend %font--small;
+  color: $grey;
+}
+
+.related {
+  margin: 20px 0 10px;
+}
+
+.image {
+  height: 270px;
+  margin-bottom: 10px;
+  width: 270px;
+}
+
+.rights {
+  margin-top: 10px;
+}
+
+.related-album:hover {
+  cursor: pointer;
+  background-color: $dark-grey;
+  color: $white;
+}
+
+@media (min-width: 576px) {
+  :host {
+    flex-direction: row;
+    width: 536px;
+  }
+
+  .section:last-child {
+    margin-left: 25px;
+  }
+
+  .album-name {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  :host {
+    width: 728px;
+  }
+}
+
+@media (min-width: 992px) {
+  :host {
+    width: 952px;
+  }
+}
+

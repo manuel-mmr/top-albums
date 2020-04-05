@@ -1,0 +1,28 @@
+<app-spinner *ngIf="loading; else loaded"></app-spinner>
+
+<ng-template #loaded>
+  <div class="section">
+    <img class="image" [src]="album.image" alt="albumimage">
+    <span class="data">
+      {{album.price.amount | currency: album.price.currency }}, {{album.numberOfSongs}} Songs
+    </span>
+    <span class="data rights">
+      {{album.rights}}
+    </span>
+  </div>
+
+  <div class="section">
+    <div class="album-name">{{album.name}}</div>
+    <div class="artist-name">{{album.artist}}</div>
+    <div class="data">{{album.category}} - {{album.releaseDate | date: 'longDate'}}</div>
+
+    <ng-container *ngIf="showRelatedAlbums()">
+      <div class="related">Related albums</div>
+      <ul class="list-group" *ngFor="let relatedAlbum of relatedAlbums">
+        <li class="list-group-item related-album" (click)="updateAlbum(relatedAlbum.category, relatedAlbum.id)">
+          {{relatedAlbum.title}}
+        </li>
+      </ul>
+    </ng-container>
+  </div>
+</ng-template>

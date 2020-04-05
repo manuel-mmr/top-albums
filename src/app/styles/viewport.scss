@@ -1,0 +1,28 @@
+$viewport--small: 576px;
+$viewport--medium: 768px;
+$viewport--large: 992px;
+$viewport--extra-large: 1200px;
+
+@mixin viewport--small {
+  @media (min-width: $viewport--small) {
+    @content;
+  }
+}
+
+@mixin viewport--medium {
+  @media (min-width: $viewport--medium) {
+    @content;
+  }
+}
+
+@mixin viewport--large {
+  @media (min-width: $viewport--large) {
+    @content;
+  }
+}
+
+@mixin viewport--extra-large {
+  @media (min-width: $viewport--extra-large) {
+    @content;
+  }
+}

@@ -1,0 +1,19 @@
+<app-spinner *ngIf="loading; else loaded"></app-spinner>
+
+<ng-template #loaded>
+  <app-search [(ngModel)]="searchText"></app-search>
+
+  <div class="albums-container">
+    <ng-container *ngIf="albums | filter: searchText as result; else noAlbums">
+      <ng-container *ngFor="let album of result">
+        <app-album [album]=album (click)="goToDetail(album)"></app-album>
+      </ng-container>
+      <ng-container *ngIf="!result.length" [ngTemplateOutlet]="noAlbums"></ng-container>
+    </ng-container>
+
+    <ng-template #noAlbums>
+      <div class="empty-container">We couldn't find any album :(</div>
+    </ng-template>
+
+  </div>
+</ng-template>

@@ -1,0 +1,11 @@
+@import '../../styles/colors.scss';
+
+:host {
+  display: block;
+}
+
+.search {
+  background-color: $extra-light-grey;
+  justify-content: flex-end;
+  top: 57px;
+}
