@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  server: 'http://localhost:4200/assets/data.json',
+  server: 'https://manuel-mmr.github.io/top-albums/assets/data.json',
 };
