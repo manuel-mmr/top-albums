@@ -11,7 +11,7 @@
   background-color: $light-grey;
   cursor: pointer;
   margin: 10px;
-  width: 180px;
+  width: 150px;
 
   &:hover {
     background-color: $dark-grey;
@@ -20,6 +20,10 @@
     .image {
       opacity: 0.5;
     }
+  }
+
+  @include viewport--extra-small {
+    width: 180px;
   }
 
   @include viewport--small {

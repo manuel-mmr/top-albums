@@ -1,7 +1,14 @@
+$viewport--extra-small: 400px;
 $viewport--small: 576px;
 $viewport--medium: 768px;
 $viewport--large: 992px;
 $viewport--extra-large: 1200px;
+
+@mixin viewport--extra-small {
+  @media (min-width: $viewport--extra-small) {
+    @content;
+  }
+}
 
 @mixin viewport--small {
   @media (min-width: $viewport--small) {
